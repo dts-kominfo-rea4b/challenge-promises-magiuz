@@ -1,6 +1,7 @@
 const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
+
 const promiseOutput = async (parameter) => {
   try {
     const isiTheaterIXX = await promiseTheaterIXX();
@@ -12,7 +13,7 @@ const promiseOutput = async (parameter) => {
     for (x = 0; x < length; x++) {
       if (isi[x]["hasil"] == parameter) result++;
     }
-    return parameter + " = " + result;
+    return result;
   } catch (pesan) {
     console.log(pesan);
   }
